@@ -17,18 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kyivstar_tv_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="pR4-RC-6SW">
-                                <rect key="frame" x="66.666666666666686" y="398" width="260" height="56"/>
+                                <rect key="frame" x="46.666666666666657" y="392" width="300" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="BKn-W6-gq2"/>
-                                    <constraint firstAttribute="height" constant="56" id="NzO-Sj-Drl"/>
+                                    <constraint firstAttribute="height" constant="68" id="mvz-cb-cGc"/>
+                                    <constraint firstAttribute="width" constant="300" id="mzZ-5x-iaK"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
-                            <constraint firstItem="pR4-RC-6SW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cXW-Ya-cle"/>
-                            <constraint firstItem="pR4-RC-6SW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mPA-UQ-N2N"/>
+                            <constraint firstItem="pR4-RC-6SW" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Sil-lc-Rih"/>
+                            <constraint firstItem="pR4-RC-6SW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="caw-5u-SeN"/>
                         </constraints>
                     </view>
                 </viewController>
