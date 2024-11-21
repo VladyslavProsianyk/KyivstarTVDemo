@@ -22,7 +22,7 @@
 		301794722CE772C30060DC9C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301794712CE772C30060DC9C /* Endpoint.swift */; };
 		301794752CE773250060DC9C /* ContentGroupDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301794742CE773250060DC9C /* ContentGroupDTO.swift */; };
 		301794772CE773380060DC9C /* PromotionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301794762CE773380060DC9C /* PromotionsDTO.swift */; };
-		3017947F2CE790310060DC9C /* HomeSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3017947E2CE790310060DC9C /* HomeSectionCell.swift */; };
+		3017947F2CE790310060DC9C /* HomeSectionCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3017947E2CE790310060DC9C /* HomeSectionCellType.swift */; };
 		301794822CE790F90060DC9C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 301794812CE790F90060DC9C /* SnapKit */; };
 		301794842CE790F90060DC9C /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 301794832CE790F90060DC9C /* SnapKit-Dynamic */; };
 		301794872CE79F4C0060DC9C /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 301794862CE79F4C0060DC9C /* Toast */; };
@@ -34,6 +34,11 @@
 		301794992CEA69B60060DC9C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301794982CEA69B60060DC9C /* HomeViewModel.swift */; };
 		3017949F2CEB622E0060DC9C /* KyivstarTVNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3017949E2CEB622E0060DC9C /* KyivstarTVNetworkManager.swift */; };
 		305897472CEE47BE002B3485 /* SimilarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305897462CEE47BE002B3485 /* SimilarItemView.swift */; };
+		3075FAAA2CEF9BC4002DFF92 /* PromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075FAA92CEF9BC4002DFF92 /* PromotionCell.swift */; };
+		3075FAAC2CEF9BE3002DFF92 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075FAAB2CEF9BE3002DFF92 /* CategoriesCell.swift */; };
+		3075FAAE2CEF9C42002DFF92 /* CinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075FAAD2CEF9C42002DFF92 /* CinemaCell.swift */; };
+		3075FAB02CEF9C57002DFF92 /* LiveChannelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075FAAF2CEF9C57002DFF92 /* LiveChannelsCell.swift */; };
+		3075FAB22CEF9C65002DFF92 /* EPGCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3075FAB12CEF9C65002DFF92 /* EPGCell.swift */; };
 		30AD49822CE759A1008F4FD2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AD49812CE759A1008F4FD2 /* Coordinator.swift */; };
 		AB5E7741261461B7004AA3B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E7740261461B7004AA3B2 /* AppDelegate.swift */; };
 		AB5E7743261461B7004AA3B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5E7742261461B7004AA3B2 /* SceneDelegate.swift */; };
@@ -56,7 +61,7 @@
 		301794712CE772C30060DC9C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		301794742CE773250060DC9C /* ContentGroupDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentGroupDTO.swift; sourceTree = "<group>"; };
 		301794762CE773380060DC9C /* PromotionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsDTO.swift; sourceTree = "<group>"; };
-		3017947E2CE790310060DC9C /* HomeSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionCell.swift; sourceTree = "<group>"; };
+		3017947E2CE790310060DC9C /* HomeSectionCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionCellType.swift; sourceTree = "<group>"; };
 		3017948C2CEA439C0060DC9C /* HomeSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionType.swift; sourceTree = "<group>"; };
 		3017948F2CEA49780060DC9C /* HomeSectionCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSectionCellModel.swift; sourceTree = "<group>"; };
 		301794912CEA571A0060DC9C /* AssetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDTO.swift; sourceTree = "<group>"; };
@@ -65,6 +70,11 @@
 		301794982CEA69B60060DC9C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		3017949E2CEB622E0060DC9C /* KyivstarTVNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyivstarTVNetworkManager.swift; sourceTree = "<group>"; };
 		305897462CEE47BE002B3485 /* SimilarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarItemView.swift; sourceTree = "<group>"; };
+		3075FAA92CEF9BC4002DFF92 /* PromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCell.swift; sourceTree = "<group>"; };
+		3075FAAB2CEF9BE3002DFF92 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		3075FAAD2CEF9C42002DFF92 /* CinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaCell.swift; sourceTree = "<group>"; };
+		3075FAAF2CEF9C57002DFF92 /* LiveChannelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChannelsCell.swift; sourceTree = "<group>"; };
+		3075FAB12CEF9C65002DFF92 /* EPGCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPGCell.swift; sourceTree = "<group>"; };
 		30AD49812CE759A1008F4FD2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AB5E773D261461B7004AA3B2 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5E7740261461B7004AA3B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,7 +148,11 @@
 		301794662CE769D50060DC9C /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
-				3017947E2CE790310060DC9C /* HomeSectionCell.swift */,
+				3075FAA92CEF9BC4002DFF92 /* PromotionCell.swift */,
+				3075FAAB2CEF9BE3002DFF92 /* CategoriesCell.swift */,
+				3075FAAD2CEF9C42002DFF92 /* CinemaCell.swift */,
+				3075FAAF2CEF9C57002DFF92 /* LiveChannelsCell.swift */,
+				3075FAB12CEF9C65002DFF92 /* EPGCell.swift */,
 				3012A5F32CECFA85009603A7 /* SectionHeaderView.swift */,
 			);
 			path = Reusable;
@@ -173,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				3017948C2CEA439C0060DC9C /* HomeSectionType.swift */,
+				3017947E2CE790310060DC9C /* HomeSectionCellType.swift */,
 				301794952CEA5E990060DC9C /* HomeSectionModel.swift */,
 				3017948F2CEA49780060DC9C /* HomeSectionCellModel.swift */,
 			);
@@ -353,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				301794752CE773250060DC9C /* ContentGroupDTO.swift in Sources */,
+				3075FAAC2CEF9BE3002DFF92 /* CategoriesCell.swift in Sources */,
 				301794702CE772AA0060DC9C /* KyivstarTVAPIEndpoint.swift in Sources */,
 				301794942CEA5B210060DC9C /* AssetDetailsDTO.swift in Sources */,
 				301794992CEA69B60060DC9C /* HomeViewModel.swift in Sources */,
@@ -364,12 +380,16 @@
 				3012A5EA2CECA954009603A7 /* ResponseDataConverter.swift in Sources */,
 				3012A6032CEE382F009603A7 /* DetailsViewModel.swift in Sources */,
 				301794922CEA571A0060DC9C /* AssetDTO.swift in Sources */,
+				3075FAB22CEF9C65002DFF92 /* EPGCell.swift in Sources */,
+				3075FAAA2CEF9BC4002DFF92 /* PromotionCell.swift in Sources */,
 				AB5E7743261461B7004AA3B2 /* SceneDelegate.swift in Sources */,
 				301794722CE772C30060DC9C /* Endpoint.swift in Sources */,
 				301794692CE76CB40060DC9C /* APIClient.swift in Sources */,
 				3012A6082CEE3C76009603A7 /* AssetDetailsSimilarModel.swift in Sources */,
-				3017947F2CE790310060DC9C /* HomeSectionCell.swift in Sources */,
+				3017947F2CE790310060DC9C /* HomeSectionCellType.swift in Sources */,
+				3075FAB02CEF9C57002DFF92 /* LiveChannelsCell.swift in Sources */,
 				3017948D2CEA439C0060DC9C /* HomeSectionType.swift in Sources */,
+				3075FAAE2CEF9C42002DFF92 /* CinemaCell.swift in Sources */,
 				3012A6062CEE3C03009603A7 /* AssetDetailsModel.swift in Sources */,
 				3012A5F72CEDF343009603A7 /* ImageDownloader.swift in Sources */,
 				3012A5FF2CEE37FB009603A7 /* DetailsView.swift in Sources */,

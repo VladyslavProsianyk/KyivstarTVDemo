@@ -105,11 +105,11 @@ class HomeView: UIViewController, UICollectionViewDelegate {
     
     private func setupCollectionView() {
         
-        collectionView.register(HomeSectionCell.self, forCellWithReuseIdentifier: HomeSectionCellType.promotions.reuseIdentifier)
-        collectionView.register(HomeSectionCell.self, forCellWithReuseIdentifier: HomeSectionCellType.categories.reuseIdentifier)
-        collectionView.register(HomeSectionCell.self, forCellWithReuseIdentifier: HomeSectionCellType.cinema.reuseIdentifier)
-        collectionView.register(HomeSectionCell.self, forCellWithReuseIdentifier: HomeSectionCellType.liveChannels.reuseIdentifier)
-        collectionView.register(HomeSectionCell.self, forCellWithReuseIdentifier: HomeSectionCellType.epg.reuseIdentifier)
+        collectionView.register(PromotionCell.self, forCellWithReuseIdentifier: HomeSectionCellType.promotions.reuseIdentifier)
+        collectionView.register(CategoriesCell.self, forCellWithReuseIdentifier: HomeSectionCellType.categories.reuseIdentifier)
+        collectionView.register(CinemaCell.self, forCellWithReuseIdentifier: HomeSectionCellType.cinema.reuseIdentifier)
+        collectionView.register(LiveChannelsCell.self, forCellWithReuseIdentifier: HomeSectionCellType.liveChannels.reuseIdentifier)
+        collectionView.register(EPGCell.self, forCellWithReuseIdentifier: HomeSectionCellType.epg.reuseIdentifier)
         collectionView.register(SectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeaderView.reuseIdentifier)
         
         view.addSubview(collectionView)
@@ -133,6 +133,14 @@ class HomeView: UIViewController, UICollectionViewDelegate {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let section = viewModel.visualSections[indexPath.section]
+        let cellModel = section.data[indexPath.row]
+        viewModel.presentDetails(for: cellModel)
+    }
+}
+
+extension HomeView {
     private func createCompositionalLayout() -> UICollectionViewLayout {
         return UICollectionViewCompositionalLayout {[weak self] (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             guard let self else { return nil }
@@ -197,15 +205,17 @@ class HomeView: UIViewController, UICollectionViewDelegate {
         
         return section
     }
-    
+}
+
+extension HomeView {
     private func setupDataSource() {
         dataSource = UICollectionViewDiffableDataSource<HomeSectionType, HomeSectionCellModel>(collectionView: collectionView) {[weak self] (collectionView, indexPath, cellModel) -> UICollectionViewCell? in
-            guard let self else { return nil }
+            guard let self, viewModel.visualSections.count > indexPath.section else { return nil }
             let sectionType = viewModel.visualSections[indexPath.section].type
            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sectionType.sectionCellType.reuseIdentifier, for: indexPath) as? HomeSectionCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sectionType.sectionCellType.reuseIdentifier, for: indexPath)
             
-            cell?.configure(with: cellModel)
+            (cell as? HomeSectionCellProtocol)?.configure(with: cellModel)
             
             return cell
         }
@@ -244,11 +254,5 @@ class HomeView: UIViewController, UICollectionViewDelegate {
             snapshot.appendItems(section.data, toSection: section.type)
         }
         dataSource.apply(snapshot, animatingDifferences: true)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let section = viewModel.visualSections[indexPath.section]
-        let cellModel = section.data[indexPath.row]
-        viewModel.presentDetails(for: cellModel)
     }
 }

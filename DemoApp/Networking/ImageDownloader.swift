@@ -8,6 +8,30 @@
 import Foundation
 import UIKit
 
+// MARK: - Error Definitions
+enum ImageDownloadError: Error, LocalizedError {
+    case invalidURL
+    case invalidData(String)
+    case dataNotExist
+    case badResponseCode(Int)
+    case responseDidntCasted
+    
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return "The URL provided is invalid."
+        case .invalidData(let convertedStringData):
+            return "The data received is invalid or corrupted. Data: \(convertedStringData)"
+        case .dataNotExist:
+            return "The data does not exist"
+        case .badResponseCode(let responseCode):
+            return "The response code \(responseCode) is not in the 200 range."
+        case .responseDidntCasted:
+            return "The response did not cast to HTTPURLResponse"
+        }
+    }
+}
+
 // MARK: - ImageDownloader Service
 class ImageDownloader {
     static let shared = ImageDownloader()
@@ -66,31 +90,7 @@ class ImageDownloader {
         task.resume()
     }
     
-    func clearCache() {
-        cache.removeAllObjects()
-    }
-}
-
-// MARK: - Error Definitions
-enum ImageDownloadError: Error, LocalizedError {
-    case invalidURL
-    case invalidData(String)
-    case dataNotExist
-    case badResponseCode(Int)
-    case responseDidntCasted
-    
-    var errorDescription: String? {
-        switch self {
-        case .invalidURL:
-            return "The URL provided is invalid."
-        case .invalidData(let convertedStringData):
-            return "The data received is invalid or corrupted. Data: \(convertedStringData)"
-        case .dataNotExist:
-            return "The data does not exist"
-        case .badResponseCode(let responseCode):
-            return "The response code \(responseCode) is not in the 200 range."
-        case .responseDidntCasted:
-            return "The response did not cast to HTTPURLResponse"
-        }
+    func clearCache(for urlString: String) {
+        cache.removeObject(forKey: NSString(string: urlString))
     }
 }

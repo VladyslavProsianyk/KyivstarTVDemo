@@ -33,7 +33,6 @@ final class HomeViewModel {
 
     private func setupBindings() {
         $sections
-            .delay(for: 0.5, scheduler: DispatchQueue.main)
             .map { $0.filter { !$0.isHiden } }
             .assign(to: &$visualSections)
     }
@@ -66,6 +65,11 @@ final class HomeViewModel {
             return
         }
         let sectionToHide = sections[index]
+        DispatchQueue.global().async {
+            sectionToHide.data.forEach { data in
+                ImageDownloader.shared.clearCache(for: data.image)
+            }
+        }
         sections[index] = sectionToHide.copyWith(isHiden: true)
     }
     
